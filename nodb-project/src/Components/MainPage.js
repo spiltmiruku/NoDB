@@ -38,7 +38,7 @@ class MainPage extends Component {
 
   add() {
     let flight = { ...this.state };
-    console.log(flight)
+    console.log(flight);
     this.props.addFlight(flight);
 
     this.setState({
@@ -57,6 +57,11 @@ class MainPage extends Component {
   }
 
   render() {
+    // <div className="tripBox">
+    //     {}
+
+    // </div>
+
     let departureLocationSelect = "";
     if (this.state.departureLocationAirports.length) {
       departureLocationSelect = (
@@ -92,88 +97,114 @@ class MainPage extends Component {
     }
 
     return (
-      <div>
+      <div className="newTripBox">
         {/* <UpcomingTrips getFlights={this.state.getFlights}/> */}
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Departing Airport"
-          name="departureLocation"
-          value={this.state.departureLocation}
-          type="text"
-        />
+        <div className="locations">
+          <div className="departureLocation">
+            <input
+              onChange={e => this.handleAdd(e)}
+              placeholder="Departure Airport"
+              name="departureLocation"
+              value={this.state.departureLocation}
+              type="text"
+            />
+          </div>
 
-        <button
-          onClick={() => this.handleAirportSearch("departureLocation")}
-          name="departureSearch"
-        >
-          {" "}
-          Search Airports{" "}
-        </button>
+          <div className="departureSearch">
+            <button
+              className="searchAirports"
+              onClick={() => this.handleAirportSearch("departureLocation")}
+              name="departureSearch"
+            >
+              {" "}
+              Search Airports{" "}
+            </button>
+          </div>
 
-        {departureLocationSelect}
+          {departureLocationSelect}
 
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Departure Date"
-          name="departureDate"
-          value={this.state.departureDate}
-          type="date"
-        />
+          <div className="arrivalLocation">
+            <input
+              onChange={e => this.handleAdd(e)}
+              placeholder="Arrival Airport"
+              name="arrivalLocation"
+              value={this.state.arrivalLocation}
+              type="text"
+            />
+          </div>
 
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Departure Time"
-          name="departureTime"
-          value={this.state.departureTime}
-          type="time"
-        />
+          <div className="arrivalSearch">
+            <button
+              className="searchAirports"
+              onClick={() => this.handleAirportSearch("arrivalLocation")}
+              name="arrivalSearch"
+            >
+              {" "}
+              Search Airports{" "}
+            </button>
+          </div>
 
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Arrival Airport"
-          name="arrivalLocation"
-          value={this.state.arrivalLocation}
-          type="text"
-        />
+          {arrivalLocationSelect}
+        </div>
 
-        <button
-          onClick={() => this.handleAirportSearch("arrivalLocation")}
-          name="arrivalSearch"
-        >
-          {" "}
-          Search Airports{" "}
-        </button>
+        <div className="dateTime">
+          <div className="departureDate">
+            <input
+              onChange={e => this.handleAdd(e)}
+              placeholder="Departure Date"
+              name="departureDate"
+              value={this.state.departureDate}
+              type="date"
+            />
+          </div>
 
-        {arrivalLocationSelect}
+          <div className="departureTime">
+            <input
+              onChange={e => this.handleAdd(e)}
+              placeholder="Departure Time"
+              name="departureTime"
+              value={this.state.departureTime}
+              type="time"
+            />
+          </div>
 
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Arrival Date"
-          name="arrivalDate"
-          value={this.state.arrivalDate}
-          type="date"
-        />
+          <div className="arrivalDate">
+            <input
+              onChange={e => this.handleAdd(e)}
+              placeholder="Arrival Date"
+              name="arrivalDate"
+              value={this.state.arrivalDate}
+              type="date"
+            />
+          </div>
 
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Arrival Time"
-          name="arrivalTime"
-          value={this.state.arrivalTime}
-          type="time"
-        />
+          <div className="arrivalTime">
+            <input
+              onChange={e => this.handleAdd(e)}
+              placeholder="Arrival Time"
+              name="arrivalTime"
+              value={this.state.arrivalTime}
+              type="time"
+            />
+          </div>
+        </div>
 
-        <input
-          onChange={e => this.handleAdd(e)}
-          placeholder="Cabin Class"
-          name="cabin"
-          value={this.state.cabin}
-          type="text"
-        />
+        <div className="cabin">
+          <input
+            onChange={e => this.handleAdd(e)}
+            placeholder="Cabin Class"
+            name="cabin"
+            value={this.state.cabin}
+            type="text"
+          />
+        </div>
 
-        <button className="addTrip" onClick={() => this.add()}>
-          {" "}
-          Add Trip{" "}
-        </button>
+        <div className="addTrip">
+          <button className="addTrip" onClick={() => this.add()}>
+            {" "}
+            Add Trip{" "}
+          </button>
+        </div>
       </div>
     );
   }
