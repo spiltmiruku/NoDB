@@ -99,6 +99,8 @@ class MainPage extends Component {
     return (
       <div className="newTripBox">
         {/* <UpcomingTrips getFlights={this.state.getFlights}/> */}
+        <a id="mainPage"></a>
+        <a href="#mainPage"></a>
         <div className="locations">
           <div className="departureLocation">
             <input
@@ -149,6 +151,9 @@ class MainPage extends Component {
 
         <div className="dateTime">
           <div className="departureDate">
+            {" "}
+            Departure Date <br />
+            <br />
             <input
               onChange={e => this.handleAdd(e)}
               placeholder="Departure Date"
@@ -159,6 +164,8 @@ class MainPage extends Component {
           </div>
 
           <div className="departureTime">
+            Departure Time <br />
+            <br />
             <input
               onChange={e => this.handleAdd(e)}
               placeholder="Departure Time"
@@ -169,6 +176,8 @@ class MainPage extends Component {
           </div>
 
           <div className="arrivalDate">
+            Arrival Date <br />
+            <br />
             <input
               onChange={e => this.handleAdd(e)}
               placeholder="Arrival Date"
@@ -179,6 +188,8 @@ class MainPage extends Component {
           </div>
 
           <div className="arrivalTime">
+            Arrival Time <br />
+            <br />
             <input
               onChange={e => this.handleAdd(e)}
               placeholder="Arrival Time"
@@ -200,7 +211,7 @@ class MainPage extends Component {
         </div>
 
         <div className="addTrip">
-          <button className="addTrip" onClick={() => this.add()}>
+          <button className="addTripBtn" onClick={() => this.add()}>
             {" "}
             Add Trip{" "}
           </button>

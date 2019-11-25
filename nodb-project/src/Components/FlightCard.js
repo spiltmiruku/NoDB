@@ -16,24 +16,23 @@ class FlightCard extends Component {
     };
   }
 
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
 
-  handleChange = (e) =>  {
-      this.setState({
-          [e.target.name]: e.target.value
-      })
-  }
-
-  editFlight = (id) => {
-      let flight = {...this.state}
-      delete flight.isEditing
-    this.props.editFlight(id, flight)
+  editFlight = id => {
+    let flight = { ...this.state };
+    delete flight.isEditing;
+    this.props.editFlight(id, flight);
     this.setState({
       isEditing: false
     });
   };
 
   render() {
-      console.log(this.state)
+    console.log(this.state);
     let {
       departureAirport,
       departureDate,
@@ -44,7 +43,7 @@ class FlightCard extends Component {
       cabin
     } = this.state;
     return (
-      <div>
+      <div className='fcwrapper'>
         {this.state.isEditing ? (
           <div>
             <input
@@ -65,6 +64,7 @@ class FlightCard extends Component {
               value={departureTime}
               type=""
             />
+
             <input
               onChange={this.handleChange}
               name="arrivalAirport"
@@ -89,13 +89,21 @@ class FlightCard extends Component {
               value={cabin}
               type=""
             />
-            <button onClick={() => this.editFlight(this.props.obj.id)}> Save Edits </button>
+            <button onClick={() => this.editFlight(this.props.obj.id)}>
+              {" "}
+              Save Edits{" "}
+            </button>
           </div>
         ) : (
           <div className="flight-card">
+            <a id="upcomingTripsPage"></a>
+            <a href="#upcomingTripsPage"></a>
             <div>{departureAirport}</div>
             <div>{departureDate}</div>
             <div>{departureTime}</div>
+
+            <img src="https://image.flaticon.com/icons/svg/61/61212.svg" alt="small airplane icon" height="20" width="20" />
+
             <div>{arrivalAirport}</div>
             <div>{arrivalDate}</div>
             <div>{arrivalTime}</div>
