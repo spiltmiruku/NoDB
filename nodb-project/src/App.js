@@ -6,6 +6,8 @@ import MainPage from './Components/MainPage'
 import UpcomingTrips from './Components/UpcomingTrips';
 import axios from "axios";
 
+import tix from './resources/tix.png';
+
 
 class App extends Component {
   constructor() {
@@ -51,6 +53,9 @@ class App extends Component {
     console.log(this.state)
     return <div className="App">
       <Header />
+      <img id='tix' src={tix} alt="airplane tickets"/>
+
+    
       <MainPage addFlight={this.addFlight} />
       <UpcomingTrips trips={this.state.trips} deleteFlight={this.deleteFlight} editFlight={this.editFlight} />
 

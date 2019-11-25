@@ -93,10 +93,12 @@ class MainPage extends Component {
     }
 
     return (
+      
       <div className="newTripBox">
         {/* <UpcomingTrips getFlights={this.state.getFlights}/> */}
-        <a id="mainPage"></a>
-        <a href="#mainPage"></a>
+        {/* <a id="mainPage"></a>
+        <a href="#mainPage"></a> */}
+   
         <div className="locations">
           <div className="departureLocation">
             <input

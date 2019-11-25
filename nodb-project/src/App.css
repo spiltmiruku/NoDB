@@ -9,7 +9,7 @@
     rgba(202, 248, 208, 1) 90.9%
   );
 
-  /* cursor: url('./resources/nyancat.gif'), default; */
+  cursor: url('./resources/nyancat.gif'), default;
 }
 
 /* button:hover {
@@ -17,7 +17,7 @@ cursor: url('./resources/spinningporo.gif'), pointer;
 } */
 
 button:hover {
-  /* cursor: url("https://66.media.tumblr.com/9a4822e68993438e5d7e2c12771368f4/tumblr_inline_mfzguogCaB1qbs47q.png"), pointer; */
+  cursor: url("https://66.media.tumblr.com/9a4822e68993438e5d7e2c12771368f4/tumblr_inline_mfzguogCaB1qbs47q.png"), pointer;
 
   background-color: rgb(245, 239, 185);
 }
@@ -55,7 +55,18 @@ button:hover {
 #poro:hover
 {
         opacity:0.5;
-        transform: scale(0.5)
+        transform: scale(0.5);
+}
+
+#tix {
+  height: 300px;
+  width: auto;
+  display: flex;
+  margin: 0px 0 -200px 265px;
+}
+
+#tix:hover {
+  transform: rotateZ(-30deg);
 }
 
 .newTripBox {
@@ -107,6 +118,9 @@ button:hover {
   border-width: 5px;
 }
 
+.searchAirports:hover {
+  transform: scale(1.5)
+}
 
 .dateTime {
   /* border: 5px solid palevioletred; */
@@ -176,6 +190,10 @@ button:hover {
   align-content: center;
   margin-left: 800px;
   outline: white;
+}
+
+.addTripBtn:hover {
+  transform: scale(1.5);
 }
 
 input[type="text"] {
