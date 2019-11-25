@@ -32,6 +32,7 @@ class FlightCard extends Component {
   };
 
   render() {
+   
     console.log(this.state);
     let {
       departureAirport,
@@ -44,60 +45,60 @@ class FlightCard extends Component {
     } = this.state;
     return (
       <div className='fcwrapper'>
+        <a id="upcomingTripsPage"></a>
         {this.state.isEditing ? (
-          <div>
+          <div className='flight-card'>
             <input
               onChange={this.handleChange}
               name="departureAirport"
               value={departureAirport}
-              type=""
+              type="text"
             />
             <input
               onChange={this.handleChange}
               name="departureDate"
               value={departureDate}
-              type=""
+              type="date"
             />
             <input
               onChange={this.handleChange}
               name="departureTime"
               value={departureTime}
-              type=""
+              type="time"
             />
 
             <input
               onChange={this.handleChange}
               name="arrivalAirport"
               value={arrivalAirport}
-              type=""
+              type="text"
             />
             <input
               onChange={this.handleChange}
               name="arrivalDate"
               value={arrivalDate}
-              type=""
+              type="date"
             />
             <input
               onChange={this.handleChange}
               name="arrivalTime"
               value={arrivalTime}
-              type=""
+              type="time"
             />
             <input
               onChange={this.handleChange}
               name="cabin"
               value={cabin}
-              type=""
+              type="text"
             />
-            <button onClick={() => this.editFlight(this.props.obj.id)}>
+            <button className='editButtons' onClick={() => this.editFlight(this.props.obj.id)}>
               {" "}
               Save Edits{" "}
             </button>
-          </div>
+            </div>
         ) : (
           <div className="flight-card">
-            <a id="upcomingTripsPage"></a>
-            <a href="#upcomingTripsPage"></a>
+    
             <div>{departureAirport}</div>
             <div>{departureDate}</div>
             <div>{departureTime}</div>

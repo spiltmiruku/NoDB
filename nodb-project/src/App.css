@@ -22,8 +22,15 @@ button:hover {
   background-color: rgb(245, 239, 185);
 }
 
+.links {
+  font-size: 1200px;
+}
+
 #header {
-  border: 5px solid red;
+  border-bottom: solid;
+  border-image: linear-gradient(to left, #97ffa0 0%, #faa0dc 25%, #fdf396 50%, #9af5e1 100%);
+  border-image-slice: 1;
+  border-width: 20px;
   font-family: "Bebas Neue", cursive;
   font-size: 50px;
   color: rgb(48, 48, 48);
@@ -36,8 +43,23 @@ button:hover {
   padding-bottom: 70px;
 }
 
+#poro {
+  height: 230px;
+  width: auto;
+}
+
+#poro
+{
+        opacity:1;
+}
+#poro:hover
+{
+        opacity:0.5;
+        transform: scale(0.5)
+}
+
 .newTripBox {
-  border: 5px solid yellow;
+  /* border: 5px solid yellow; */
   padding-left: 20px;
   height: 700px;
   width: 800px;
@@ -47,7 +69,7 @@ button:hover {
     rgb(137, 250, 184),
     rgb(228, 161, 255)
   );
-  margin: 0px 0px 20px 200px;
+  margin: 20px 0px 20px 400px;
   border-radius: 100px;
   display: flex;
   flex-direction: row;
@@ -58,7 +80,7 @@ button:hover {
 }
 
 .locations {
-  border: 5px solid purple;
+  /* border: 5px solid purple; */
   height: 350px;
   width: 330px;
   margin: 20px;
@@ -72,16 +94,22 @@ button:hover {
 }
 
 .searchAirports {
-  height: 35px;
-  width: 100px;
+  font-size: 14px;
+  height: 55px;
+  width: 150px;
   border-radius: 5px;
   display: flex;
+  justify-content: center;
   background-color: skyblue;
   outline: white;
+  border-image: linear-gradient(to left, #faeca0 0%, #9af5e1 100%);
+  border-image-slice: 1;
+  border-width: 5px;
 }
 
+
 .dateTime {
-  border: 5px solid palevioletred;
+  /* border: 5px solid palevioletred; */
   height: 400px;
   width: 220px;
   margin: 20px;
@@ -95,59 +123,59 @@ button:hover {
 }
 
 .departureDate {
-  border: 5px solid navy;
+  /* border: 5px solid navy; */
   width: 150px;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
 }
 
 .departureTime {
-  border: 5px solid navy;
+  /* border: 5px solid navy; */
   width: 150px;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
 }
 
 .arrivalDate {
-  border: 5px solid navy;
+  /* border: 5px solid navy; */
   width: 150px;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
 }
 
 .arrivalTime {
-  border: 5px solid navy;
+  /* border: 5px solid navy; */
   width: 150px;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
 }
 
 .cabin {
+  /* border: 5px solid lawngreen; */
   height: 50px;
   width: 200px;
-  border: 5px solid lawngreen;
   padding-top: 15px;
   margin-left: 425px;
 }
 
 .addTripBtn {
+  border-image: linear-gradient(to left, #e8a0fa 0%, #9af5e1 100%);
+  border-image-slice: 1;
+  border-width: 5px;
+  /* border-radius: 15px; */
   font-size: 25px;
   font-weight: 900;
   color: rgb(30, 57, 88);
   background-color: rgb(173, 255, 230);
   height: 50px;
   width: 200px;
-  border-radius: 5px;
   align-content: center;
   margin-left: 800px;
+  outline: white;
 }
 
 input[type="text"] {
@@ -192,7 +220,7 @@ input[type="date"] {
   font-size: 20px;
   font-family: "Raleway", sans-serif;
   height: 70px;
-  width: 1000px;
+  width: 1200px;
   border-radius: 20px;
   padding: 30px;
   margin: 10px;

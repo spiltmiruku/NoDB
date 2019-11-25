@@ -57,11 +57,7 @@ class MainPage extends Component {
   }
 
   render() {
-    // <div className="tripBox">
-    //     {}
-
-    // </div>
-
+  
     let departureLocationSelect = "";
     if (this.state.departureLocationAirports.length) {
       departureLocationSelect = (
