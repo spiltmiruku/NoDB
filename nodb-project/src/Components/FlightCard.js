@@ -44,8 +44,8 @@ class FlightCard extends Component {
       cabin
     } = this.state;
     return (
-      <div className='fcwrapper'>
-        <a id="upcomingTripsPage"></a>
+      <section className='flightcardcontainer'>
+       
         {this.state.isEditing ? (
           <div className='flight-card'>
             <input
@@ -125,7 +125,7 @@ class FlightCard extends Component {
             </button>
           </div>
         )}
-      </div>
+      </section>
     );
   }
 }

@@ -10,7 +10,7 @@ const Header = props => {
   );
   return (
     <header id="header">
-<img id="poro" src={spinningporo} />
+<img id="poro" src={spinningporo} alt='spinning poro'/>
       {headerText}
     </header>
   );

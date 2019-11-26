@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 // import axios from 'axios';
 import Header from './Header';
 import FlightCard from './FlightCard';
@@ -13,7 +13,6 @@ const UpcomingTrips = (props) =>
                     editFlight={props.editFlight}
                     deleteFlight={props.deleteFlight}
                     obj={element}
-
                     /> 
                     )
               } )}
