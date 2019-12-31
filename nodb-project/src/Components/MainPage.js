@@ -28,10 +28,11 @@ class MainPage extends Component {
   }
 
   handleAirportSearch(location) {
-    axios.get("/api/airports?name=" + this.state[location]).then(res => {
+    axios.get("/api/airports?name=" + this.state[location + 'Location']).then(res => {
       console.log(res);
       this.setState({
-        [`${location}Airports`]: res.data
+        [`${location}LocationAirports`]: res.data,
+        [`${location}Airport`]: res.data[0].code 
       });
     });
   }
@@ -113,7 +114,7 @@ class MainPage extends Component {
           <div className="departureSearch">
             <button
               className="searchAirports"
-              onClick={() => this.handleAirportSearch("departureLocation")}
+              onClick={() => this.handleAirportSearch("departure")}
               name="departureSearch"
             >
               {" "}
@@ -136,7 +137,7 @@ class MainPage extends Component {
           <div className="arrivalSearch">
             <button
               className="searchAirports"
-              onClick={() => this.handleAirportSearch("arrivalLocation")}
+              onClick={() => this.handleAirportSearch("arrival")}
               name="arrivalSearch"
             >
               {" "}
@@ -162,7 +163,7 @@ class MainPage extends Component {
           </div>
 
           <div className="departureTime">
-          <label for="deptartureTime"> Departure Time </label>
+          <label for="departureTime"> Departure Time </label>
             <br />
             <input
               onChange={e => this.handleAdd(e)}

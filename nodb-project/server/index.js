@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express'),
     cors = require('cors'),
     tripsCtrl = require('./controllers/tripsCtrl'),

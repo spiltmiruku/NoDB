@@ -9,7 +9,7 @@
     rgba(202, 248, 208, 1) 90.9%
   );
 
-  cursor: url('./resources/nyancat.gif'), default;
+  /* cursor: url('./resources/nyancat.gif'), default; */
 }
 
 /* button:hover {
@@ -51,6 +51,7 @@ button:hover {
 #poro
 {
         opacity:1;
+        /* transition: 0.5s; */
 }
 #poro:hover
 {
